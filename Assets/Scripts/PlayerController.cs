@@ -94,11 +94,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    /*public void Die()
+    public void Die()
     {
-        Time.timeScale = 0f;
-        gameOverScreen.SetActive(true);
-    }*/
+        Debug.Log("Rikno si jbg...");
+    }
 
     private void ReloadLevel()
     {
