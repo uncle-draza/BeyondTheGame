@@ -319,19 +319,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d431bbe87b07047a572da24be99781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissiveMaterial: {fileID: 2100000, guid: ae8b252fa4f58834ca5ab46c897e6bcd, type: 2}
-  objectToChange: {fileID: 4237002269833455943}
-  minIntensity: 1
-  maxIntensity: 5
   frequency: 9
-  lightMin: 30
-  lightMax: 60
+  emissiveMaterial: {fileID: 2100000, guid: ae8b252fa4f58834ca5ab46c897e6bcd, type: 2}
+  innerSphere: {fileID: 0}
+  minEmissionIntensity: 4
+  maxEmissionIntensity: 5
+  minLightIntensity: 30
+  maxLightIntensity: 60
   light1: {fileID: 4237002269485766176}
   light2: {fileID: 4237002269847185644}
-  player: {fileID: 0}
-  ppEffectMaxDistance: 20
+  postProcessingStartDistance: 0
   volume: {fileID: 0}
-  anchorPoint: {fileID: 4237002269382668628}
+  resonatorPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &379712595652655281
 BoxCollider:
   m_ObjectHideFlags: 0

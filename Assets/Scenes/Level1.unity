@@ -4826,6 +4826,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1485751029 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4237002269833455943, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+  m_PrefabInstance: {fileID: 4237002269552457583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487330967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5781,6 +5786,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1734412585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4237002269382668628, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+  m_PrefabInstance: {fileID: 4237002269552457583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1752032405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7128,11 +7138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455679656592019416, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.26
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 455679656592019416, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 329.03
+      value: -28.8
       objectReference: {fileID: 0}
     - target: {fileID: 455679656592019416, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8281,6 +8291,34 @@ PrefabInstance:
       propertyPath: volume
       value: 
       objectReference: {fileID: 700954908}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: innerSphere
+      value: 
+      objectReference: {fileID: 1485751029}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: resonatorPoint
+      value: 
+      objectReference: {fileID: 1734412585}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: maxLightIntensity
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: minLightIntensity
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: maxEmissionIntensity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: minEmissionIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 379712595652655282, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
+      propertyPath: postProcessingStartDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 379712595652655283, guid: 2fa0911a96e720d4bb206663844bed08, type: 3}
       propertyPath: m_RootOrder
       value: 2
