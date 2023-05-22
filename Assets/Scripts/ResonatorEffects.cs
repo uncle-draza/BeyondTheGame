@@ -6,28 +6,37 @@ using UnityEngine.Rendering.Universal;
 
 public class ResonatorEffects : MonoBehaviour
 {
-    public Material emissiveMaterial;
-    public Renderer objectToChange;
-    public float minIntensity;
-    public float maxIntensity;
+    [Header("Pulsating Effect")]
     public float frequency;
-    private float time;
-    public float lightMin;
-    public float lightMax;
+
+    [Header("Core Pulsating")]
+    public Material emissiveMaterial;
+    public Renderer innerSphere;
+    public float minEmissionIntensity;
+    public float maxEmissionIntensity;
+
+    [Header("Light Pulsating")]
+    public float minLightIntensity;
+    public float maxLightIntensity;
     public Light light1;
     public Light light2;
-    public Transform player;
-    public float ppEffectMaxDistance;
+
+    [Header("Post Processing")]
+    public float postProcessingStartDistance;
     private float distance;
     private float mappedValue;
     public Volume volume;
     FilmGrain filmGrain;
     ChromaticAberration chromaticAberration;
-    public Transform anchorPoint;
+
+    [Header("General")]
+    public Transform resonatorPoint;
+    public Transform player;
+    private float time;
     
     void Start()
     {
-        emissiveMaterial = objectToChange.GetComponent<Renderer>().material;
+        emissiveMaterial = innerSphere.GetComponent<Renderer>().material;
         volume.profile.TryGet<FilmGrain>(out filmGrain);
         volume.profile.TryGet<ChromaticAberration>(out chromaticAberration);
     }
@@ -37,10 +46,10 @@ public class ResonatorEffects : MonoBehaviour
     {
         time += Time.deltaTime;
         float oscilation = Mathf.Sin(time * frequency) * 0.5f + 0.5f;
-        float value = Mathf.Lerp(minIntensity, maxIntensity, oscilation);
+        float value = Mathf.Lerp(minEmissionIntensity, maxEmissionIntensity, oscilation);
 
         float lightoscilation = Mathf.Sin(time * frequency) * 0.5f + 0.5f;
-        float lightvalue = Mathf.Lerp(lightMin, lightMax, lightoscilation);
+        float lightvalue = Mathf.Lerp(minLightIntensity, maxLightIntensity, lightoscilation);
 
 
         SetEmissionIntensity(value);
@@ -52,9 +61,9 @@ public class ResonatorEffects : MonoBehaviour
 
     private void FixedUpdate()
     {
-        distance = Vector3.Distance(player.position, anchorPoint.position);
+        distance = Vector3.Distance(player.position, resonatorPoint.position);
         Debug.Log(distance);
-        mappedValue = Mathf.InverseLerp(0f, ppEffectMaxDistance, distance);
+        mappedValue = Mathf.InverseLerp(0f, postProcessingStartDistance, distance);
         mappedValue = Mathf.Clamp01(mappedValue);
         mappedValue = 1f - mappedValue;
         filmGrain.intensity.value = mappedValue;
