@@ -62,7 +62,6 @@ public class ResonatorEffects : MonoBehaviour
     private void FixedUpdate()
     {
         distance = Vector3.Distance(player.position, resonatorPoint.position);
-        Debug.Log(distance);
         mappedValue = Mathf.InverseLerp(0f, postProcessingStartDistance, distance);
         mappedValue = Mathf.Clamp01(mappedValue);
         mappedValue = 1f - mappedValue;
