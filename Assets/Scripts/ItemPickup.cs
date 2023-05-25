@@ -10,7 +10,7 @@ public class ItemPickup : MonoBehaviour
     public GameObject itemPoint;
     public GameObject player;
     private bool isShowing = false;
-
+    public GameObject pitem;
 
     void Update()
     {
@@ -19,12 +19,13 @@ public class ItemPickup : MonoBehaviour
             thisInstance.GetComponent<MeshRenderer>().enabled = false;
             player.GetComponent<PlayerController>().canMove = false;
             Instantiate(itemPrefab, itemPoint.transform.position, itemPoint.transform.rotation);
+            pitem.GetComponent<PickableItem>().isPickedUp = true;
             isShowing = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
 
-        if(isShowing && Input.GetKeyDown(KeyCode.Escape))
+        if(isShowing && Input.GetKeyDown(KeyCode.Q))
         {
             GameObject item = GameObject.FindGameObjectWithTag("ShowingItem");
             item.SetActive(false);
