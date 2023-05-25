@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public GameObject thisPrefab;
+    public GameObject thisInstance;
+    public GameObject itemPrefab;
     public bool isInside = false;
-
-    void Start()
-    {
-        
-    }
+    public GameObject itemPoint;
+    public GameObject player;
+    private bool isShowing = false;
 
 
     void Update()
     {
         if(isInside && Input.GetKeyDown(KeyCode.E))
         {
-            thisPrefab.GetComponent<MeshRenderer>().enabled = false;
-            
+            thisInstance.GetComponent<MeshRenderer>().enabled = false;
+            player.GetComponent<PlayerController>().canMove = false;
+            Instantiate(itemPrefab, itemPoint.transform.position, itemPoint.transform.rotation);
+            isShowing = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if(isShowing && Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject item = GameObject.FindGameObjectWithTag("ShowingItem");
+            item.SetActive(false);
+            isShowing = false;
+            player.GetComponent<PlayerController>().canMove = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 

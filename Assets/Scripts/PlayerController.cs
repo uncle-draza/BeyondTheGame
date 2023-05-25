@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool isMoving;
     public bool isAlive = true;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool canMove = true;
 
     void Start()
