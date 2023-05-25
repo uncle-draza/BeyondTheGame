@@ -11,16 +11,18 @@ public class ItemPickup : MonoBehaviour
     public GameObject player;
     private bool isShowing = false;
     public GameObject pitem;
+    private bool pickedUp = false;
 
     void Update()
     {
-        if(isInside && Input.GetKeyDown(KeyCode.E))
+        if(isInside == true && Input.GetKeyDown(KeyCode.E) && pickedUp == false)
         {
             thisInstance.GetComponent<MeshRenderer>().enabled = false;
             player.GetComponent<PlayerController>().canMove = false;
             Instantiate(itemPrefab, itemPoint.transform.position, itemPoint.transform.rotation);
             pitem.GetComponent<PickableItem>().isPickedUp = true;
             isShowing = true;
+            pickedUp = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -38,11 +40,13 @@ public class ItemPickup : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        isInside = true;
+        if(other.tag.Equals("Player"))
+            isInside = true;
     }
 
     public void OnTriggerExit(Collider other)
     {
-        isInside = false;
+        if(other.tag.Equals("Player"))
+            isInside = false;
     }
 }
