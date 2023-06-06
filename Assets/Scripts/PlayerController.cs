@@ -20,9 +20,10 @@ public class PlayerController : MonoBehaviour
     private bool isPlayerRotating;
     public bool isMoving;
     public bool isAlive = true;
-
+    public GameObject soundManager;
     //[HideInInspector]
     public bool canMove = true;
+    private bool isMakingNoise;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked; //da ne zaboravim da otkljucam kursor kada je potrebno
         Cursor.visible = false;
+        isMakingNoise = false;
     }
 
     void Update()
@@ -43,6 +45,11 @@ public class PlayerController : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+        if((Input.GetKey(KeyCode.LeftShift) && curSpeedX!=0 & curSpeedY!=0) || Input.GetKey(KeyCode.Space))
+        {
+            soundManager.GetComponent<CurrentSound>().AddNewSound(this.transform.position);
+        }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {

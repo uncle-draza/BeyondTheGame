@@ -3782,7 +3782,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 455679656965427405, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
   m_PrefabInstance: {fileID: 455679657382182332}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1229164355
+--- !u!114 &1229164351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3805,7 +3805,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -7232,7 +7232,8 @@ PrefabInstance:
       propertyPath: points.Array.data[12]
       value: 
       objectReference: {fileID: 1476132297}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 14343760, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
 --- !u!23 &466608246244894998
 MeshRenderer:
