@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public GameObject soundManager;
     //[HideInInspector]
     public bool canMove = true;
+    public bool isMakingNoise = false;
 
     void Start()
     {
@@ -44,9 +45,14 @@ public class PlayerController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if((Input.GetKey(KeyCode.LeftShift) && curSpeedX!=0 & curSpeedY!=0) || Input.GetKey(KeyCode.Space))
+        if((Input.GetKey(KeyCode.LeftShift) && curSpeedX!=0 & curSpeedY!=0) || Input.GetKey(KeyCode.Space) || ((curSpeedX!=0 || curSpeedY!=0)&&!Input.GetKey(KeyCode.LeftControl)))
         {
             soundManager.GetComponent<CurrentSound>().AddNewSound(this.transform.position);
+            isMakingNoise = true;
+        }
+        else
+        {
+            isMakingNoise = false;
         }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)

@@ -64,6 +64,7 @@ public class EnemyHearing : MonoBehaviour
     private void Patrol()
     {
         isAttacking = false;
+        animationState = 1;
         if (transform.position == waypoints[targetIndex].position)
         {
             nextTargetPoint();

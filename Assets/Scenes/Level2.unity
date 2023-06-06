@@ -9030,8 +9030,8 @@ MonoBehaviour:
   attackSpeed: 35
   player: {fileID: 254842463}
   isAttacking: 0
-  killDistance: 1
-  maxHearingDistance: 100
+  killDistance: 2
+  maxHearingDistance: 150
   animationState: 1
   attackDistance: 0
   anim: {fileID: 1767712457211180146}
