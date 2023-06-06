@@ -9031,10 +9031,10 @@ MonoBehaviour:
   player: {fileID: 254842463}
   isAttacking: 0
   killDistance: 1
-  maxHearingDistance: 0
+  maxHearingDistance: 100
   animationState: 1
   attackDistance: 0
-  anim: {fileID: 0}
+  anim: {fileID: 1767712457211180146}
   attackTurnSpeed: 3
   soundManager: {fileID: 856110193}
   killTolerance: 0

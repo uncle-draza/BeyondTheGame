@@ -21,6 +21,7 @@ public class EnemyHearing : MonoBehaviour
     private Vector3 defaultSoundPosition;
     private Vector3 soundPosition;
     public float killTolerance;
+    private float distanceToSound;
 
     void Start()
     {
@@ -30,7 +31,10 @@ public class EnemyHearing : MonoBehaviour
 
     void Update()
     {
+        anim.SetInteger("animationState", animationState);
+
         soundPosition = soundManager.GetComponent<CurrentSound>().soundPosition;
+        distanceToSound = Vector3.Distance(this.transform.position, soundPosition);
 
         if (soundPosition == defaultSoundPosition)
         {
@@ -38,21 +42,23 @@ public class EnemyHearing : MonoBehaviour
         }
         else
         {
-            AttackTarget();
+            if(distanceToSound < maxHearingDistance)
+            {
+                AttackTarget();
+            }
+            else
+            {
+                Patrol();
+            }
+            
         }
 
-        /*if(Vector3.Distance(this.transform.position, soundPosition) <= killDistance)
+        
+        //pustanje animacije napada
+        if (distanceToSound < killDistance + attackDistance && isAttacking)
         {
-            if(Vector3.Distance(soundPosition, player.transform.position) < killTolerance)
-            {
-                //kill player
-            }
-        }*/
-
-        //provera da li je cudoviste kod mete
-        //ako jeste, proveri da li je igrac tu
-        //ako jeste igrac tu, ubij ga
-        //ako nije igrac tu, vrati se da patroliras
+            animationState = 3;
+        }
     }
 
     private void Patrol()
@@ -76,6 +82,7 @@ public class EnemyHearing : MonoBehaviour
     private void AttackTarget()
     {
         isAttacking = true;
+        animationState = 2;
         transform.position = Vector3.MoveTowards(transform.position, soundPosition, attackSpeed * Time.deltaTime);
         var targetRotation = Quaternion.LookRotation(soundPosition - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);

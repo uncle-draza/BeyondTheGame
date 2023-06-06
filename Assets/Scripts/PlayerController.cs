@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public GameObject soundManager;
     //[HideInInspector]
     public bool canMove = true;
-    private bool isMakingNoise;
 
     void Start()
     {
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked; //da ne zaboravim da otkljucam kursor kada je potrebno
         Cursor.visible = false;
-        isMakingNoise = false;
     }
 
     void Update()
