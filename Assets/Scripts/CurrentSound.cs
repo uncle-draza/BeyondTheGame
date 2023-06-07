@@ -10,11 +10,6 @@ public class CurrentSound : MonoBehaviour
     public float currentTime;
     private bool isTimerRunning;
 
-
-    void Start()
-    {
-    }
-
     void Update()
     {
         if(isTimerRunning)

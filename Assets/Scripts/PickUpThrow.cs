@@ -4,30 +4,44 @@ using UnityEngine;
 
 public class PickUpThrow : MonoBehaviour
 {
-    public float throwForce; //600
+    public float throwForce;
     private Vector3 objectPos;
     private float distance;
-
+    public GameObject soundManager;
     public bool canHold = true;
     public GameObject item;
     public GameObject tempParent;
     public bool isHolding;
     public float pickupDistance;
+    private bool pickedUp = false;
 
     void Update()
     {
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
+
+
+        if(Input.GetKeyDown(KeyCode.E) && distance <= pickupDistance)
+        {
+            isHolding = true;
+            pickedUp = true;
+            item.GetComponent<Rigidbody>().useGravity = false;
+            item.GetComponent<Rigidbody>().detectCollisions = true;
+            item.transform.position = tempParent.transform.position;
+        }
+
         if(distance >= 10f)
         {
             isHolding = false;
         }
+
+
         if(isHolding==true)
         {
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             item.transform.SetParent(tempParent.transform);
             
-            if(Input.GetMouseButtonDown(1))
+            if(Input.GetMouseButtonDown(0))
             {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
                 isHolding = false;
@@ -42,18 +56,12 @@ public class PickUpThrow : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void OnCollisionEnter(Collision collision)
     {
-        if(distance<=pickupDistance)
+        if(pickedUp == true)
         {
-            isHolding = true;
-            item.GetComponent<Rigidbody>().useGravity = false;
-            item.GetComponent<Rigidbody>().detectCollisions = true;
+            soundManager.GetComponent<CurrentSound>().AddNewSound(this.transform.position);
+            pickedUp = false;
         }
-    }
-
-    private void OnMouseUp()
-    {
-        isHolding = false;
     }
 }

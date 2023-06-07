@@ -243,9 +243,17 @@ PrefabInstance:
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 856110193}
+    - target: {fileID: 5755114646925202524, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
+      propertyPath: m_Name
+      value: itemCarryLocation
+      objectReference: {fileID: 0}
     - target: {fileID: 6610779134650346087, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.352
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610779134650346087, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.427
       objectReference: {fileID: 0}
     - target: {fileID: 6610779134650346087, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7470,7 +7478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3494f9ac44b2c7844a0f730b89a91b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForce: 800
+  throwForce: 1000
+  soundManager: {fileID: 856110193}
   canHold: 1
   item: {fileID: 820923616}
   tempParent: {fileID: 1254743168}
@@ -9035,7 +9044,7 @@ MonoBehaviour:
   player: {fileID: 254842463}
   isAttacking: 0
   killDistance: 2
-  maxHearingDistance: 150
+  maxHearingDistance: 120
   animationState: 1
   attackDistance: 0
   anim: {fileID: 1767712457211180146}
@@ -13017,6 +13026,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e1dcd6027b0ee7f40929c2ba821f1613, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1dcd6027b0ee7f40929c2ba821f1613, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1dcd6027b0ee7f40929c2ba821f1613, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1dcd6027b0ee7f40929c2ba821f1613, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1dcd6027b0ee7f40929c2ba821f1613, type: 3}
       propertyPath: m_LocalPosition.x
