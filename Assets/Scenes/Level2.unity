@@ -13845,6 +13845,7 @@ MonoBehaviour:
   isAttacking: 0
   killDistance: 2
   maxHearingDistance: 120
+  minHearingDistance: 40
   animationState: 1
   attackDistance: 0
   anim: {fileID: 251019556}
@@ -16371,6 +16372,7 @@ MonoBehaviour:
   isAttacking: 0
   killDistance: 2
   maxHearingDistance: 120
+  minHearingDistance: 40
   animationState: 1
   attackDistance: 0
   anim: {fileID: 1767712457211180146}
@@ -17447,6 +17449,7 @@ MonoBehaviour:
   isAttacking: 0
   killDistance: 2
   maxHearingDistance: 120
+  minHearingDistance: 40
   animationState: 1
   attackDistance: 0
   anim: {fileID: 2094511456}
@@ -20512,6 +20515,7 @@ MonoBehaviour:
   isAttacking: 0
   killDistance: 2
   maxHearingDistance: 120
+  minHearingDistance: 40
   animationState: 1
   attackDistance: 0
   anim: {fileID: 1429579380}

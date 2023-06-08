@@ -13,6 +13,7 @@ public class EnemyHearing : MonoBehaviour
     [SerializeField] private bool isAttacking;
     public float killDistance;
     [SerializeField] private float maxHearingDistance;
+    [SerializeField] private float minHearingDistance;
     [SerializeField] public int animationState = 1; //1-moving, 2-detected, 3-attack
     public float attackDistance;
     public Animator anim;
@@ -22,6 +23,7 @@ public class EnemyHearing : MonoBehaviour
     private Vector3 soundPosition;
     public float killTolerance;
     private float distanceToSound;
+    private float distanceToPlayer;
 
     void Start()
     {
@@ -35,25 +37,31 @@ public class EnemyHearing : MonoBehaviour
 
         soundPosition = soundManager.GetComponent<CurrentSound>().soundPosition;
         distanceToSound = Vector3.Distance(this.transform.position, soundPosition);
+        distanceToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
 
-        if (soundPosition == defaultSoundPosition)
+        if(distanceToPlayer<minHearingDistance && player.GetComponent<PlayerController>().isTranslating == true)
         {
-            Patrol();
+            Attack(player.transform.position);
         }
         else
         {
-            if(distanceToSound < maxHearingDistance)
-            {
-                AttackTarget();
-            }
-            else
+            if (soundPosition == defaultSoundPosition)
             {
                 Patrol();
             }
-            
-        }
+            else
+            {
+                if (distanceToSound < maxHearingDistance)
+                {
+                    Attack(soundPosition);
+                }
+                else
+                {
+                    Patrol();
+                }
 
-        
+            }
+        }
         //pustanje animacije napada
         if (distanceToSound < killDistance + attackDistance && isAttacking)
         {
@@ -80,12 +88,12 @@ public class EnemyHearing : MonoBehaviour
         if (targetIndex >= waypoints.Length)
             targetIndex = 0;
     }
-    private void AttackTarget()
+    private void Attack(Vector3 target)
     {
         isAttacking = true;
         animationState = 2;
-        transform.position = Vector3.MoveTowards(transform.position, soundPosition, attackSpeed * Time.deltaTime);
-        var targetRotation = Quaternion.LookRotation(soundPosition - transform.position);
+        transform.position = Vector3.MoveTowards(transform.position, target, attackSpeed * Time.deltaTime);
+        var targetRotation = Quaternion.LookRotation(target - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 }
