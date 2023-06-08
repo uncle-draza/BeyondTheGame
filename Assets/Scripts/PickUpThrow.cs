@@ -14,6 +14,12 @@ public class PickUpThrow : MonoBehaviour
     public bool isHolding;
     public float pickupDistance;
     private bool pickedUp = false;
+    private Collider collider;
+
+    private void Start()
+    {
+        collider = this.GetComponent<BoxCollider>();
+    }
 
     void Update()
     {
@@ -40,10 +46,12 @@ public class PickUpThrow : MonoBehaviour
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             item.transform.SetParent(tempParent.transform);
+            collider.isTrigger = true;
             
             if(Input.GetMouseButtonDown(0))
             {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
+                collider.isTrigger = false;
                 isHolding = false;
             }
         }
