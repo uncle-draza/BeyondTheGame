@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press [X] to continue...
+  m_text: Press [SPACE] to continue...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f71a5186c18bd6342ab5ce229c110033, type: 2}
   m_sharedMaterial: {fileID: 6142621888618201163, guid: f71a5186c18bd6342ab5ce229c110033, type: 2}
@@ -440,7 +440,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &2419796342482066662
 MonoBehaviour:
