@@ -43,7 +43,7 @@ public class EnemySightAI : MonoBehaviour
 
         if (distanceToPlayer < killDistance && isAttacking)
         {
-            player.GetComponent<PlayerController>().Die();
+            player.GetComponent<PlayerController>().Die("You have been slainded by otherworldly monsters...");
         }
 
         //Proveri da li je igrac u vidnom polju

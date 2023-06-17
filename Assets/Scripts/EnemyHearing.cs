@@ -39,7 +39,12 @@ public class EnemyHearing : MonoBehaviour
         distanceToSound = Vector3.Distance(this.transform.position, soundPosition);
         distanceToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
 
-        if(distanceToPlayer<minHearingDistance && player.GetComponent<PlayerController>().isTranslating == true)
+        if (distanceToPlayer < killDistance && isAttacking)
+        {
+            player.GetComponent<PlayerController>().Die("You have been slainded by otherworldly monsters...");
+        }
+
+        if (distanceToPlayer<minHearingDistance && player.GetComponent<PlayerController>().isTranslating == true)
         {
             Attack(player.transform.position);
         }

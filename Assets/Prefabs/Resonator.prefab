@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 379712595652655283}
   - component: {fileID: 379712595652655282}
   - component: {fileID: 379712595652655281}
+  - component: {fileID: 1619103535}
   m_Layer: 0
   m_Name: Resonator
   m_TagString: Untagged
@@ -321,16 +322,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 9
   emissiveMaterial: {fileID: 2100000, guid: ae8b252fa4f58834ca5ab46c897e6bcd, type: 2}
-  innerSphere: {fileID: 0}
+  innerSphere: {fileID: 4237002269833455943}
   minEmissionIntensity: 4
   maxEmissionIntensity: 5
   minLightIntensity: 30
   maxLightIntensity: 60
   light1: {fileID: 4237002269485766176}
   light2: {fileID: 4237002269847185644}
-  postProcessingStartDistance: 0
+  postProcessingStartDistance: 20
   volume: {fileID: 0}
-  resonatorPoint: {fileID: 0}
+  resonatorPoint: {fileID: 4237002269382668628}
   player: {fileID: 0}
 --- !u!65 &379712595652655281
 BoxCollider:
@@ -345,6 +346,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2879333, y: 4.843359, z: 2.328827}
   m_Center: {x: -0.01022172, y: 2.3714323, z: 0.01020813}
+--- !u!114 &1619103535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012978089504694793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a664922cfdfad45b1e8485e3f42d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchingLevel: 1
+  player: {fileID: 0}
+  uiActivationDistance: 10
+  ui: {fileID: 0}
+  finalScene: 
+  quoteTextUI: {fileID: 0}
+  quoteText: Nyarlathotep... the crawling chaos... I am the last... I will tell the
+    audient void...
+  backgroundImage: {fileID: 0}
+  spriteToShow: {fileID: 21300000, guid: bf12551d8f1fbcc4a9014a55ee59749c, type: 3}
+  levelToLoad: Level3
+  pressToContinue: {fileID: 0}
+  indicatorText: {fileID: 0}
 --- !u!1 &1170469213460385192
 GameObject:
   m_ObjectHideFlags: 0

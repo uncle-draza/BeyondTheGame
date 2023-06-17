@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -24,10 +26,14 @@ public class PlayerController : MonoBehaviour
     //[HideInInspector]
     public bool canMove = true;
     public bool isMakingNoise = false;
+    public GameObject gameoverUI;
+    public TextMeshProUGUI deathReason;
+
 
     void Start()
     {
         Time.timeScale = 1f;
+        gameoverUI.SetActive(false);
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked; //da ne zaboravim da otkljucam kursor kada je potrebno
         Cursor.visible = false;
@@ -105,9 +111,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void Die()
+    public void Die(string reason)
     {
-        Debug.Log("Rikno si jbg...");
+        gameoverUI.SetActive(true);
+        deathReason.text = reason;
+        Time.timeScale = 0f;
     }
 
     private void ReloadLevel()
