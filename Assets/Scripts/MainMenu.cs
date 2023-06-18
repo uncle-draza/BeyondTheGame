@@ -90,7 +90,7 @@ public class MainMenu : MonoBehaviour
             if (asyncOperation.progress >= 0.9f)
             {
                 pressToContinue.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.L))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     asyncOperation.allowSceneActivation = true;
                 }
