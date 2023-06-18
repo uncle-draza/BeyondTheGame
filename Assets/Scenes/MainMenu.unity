@@ -2810,7 +2810,7 @@ MonoBehaviour:
   quoteText: In his house at R'lyeh dead Cthulhu waits dreaming.
   spriteToShow: {fileID: 21300000, guid: 4aa0ccaf374cbba4cb629caed53113e5, type: 3}
   backgroundImage: {fileID: 109620307}
-  firstCutsceneSceneName: 
+  firstCutsceneSceneName: Cutscene1
 --- !u!4 &1566579388
 Transform:
   m_ObjectHideFlags: 0
