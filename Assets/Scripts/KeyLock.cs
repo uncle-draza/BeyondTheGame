@@ -15,6 +15,7 @@ public class KeyLock : MonoBehaviour
     public bool completedUnlocking = false;
     public TextMeshProUGUI indicatorText;
     public GameObject indicatorTextObj;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -69,5 +70,6 @@ public class KeyLock : MonoBehaviour
     public void OpenDoor()
     {
         completedUnlocking = true;
+        audioSource.Play();
     }
 }
