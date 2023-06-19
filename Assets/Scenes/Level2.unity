@@ -432,6 +432,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.053
       objectReference: {fileID: 0}
+    - target: {fileID: 8808963524981621417, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
+      propertyPath: landingsound
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
 --- !u!1 &10909836 stripped

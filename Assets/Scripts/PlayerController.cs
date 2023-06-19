@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f; //ovo da promenim (povecam) da bih mogao da vidim pravo iznad sebe
-    CharacterController characterController;
+    public CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
     public bool isTranslating;
