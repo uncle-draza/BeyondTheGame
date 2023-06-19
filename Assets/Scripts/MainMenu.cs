@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None; 
+        Cursor.visible = true;
         //proveri da li je igra igrana
         scenePlayedIndex = PlayerPrefs.GetInt("LevelIndex", 999);
         if(scenePlayedIndex == 999)
