@@ -9124,11 +9124,11 @@ PrefabInstance:
     - target: {fileID: 4824061356737489821, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: hasBulets
       value: 
-      objectReference: {fileID: 8300000, guid: 987211049ec3775459309da6a51bc1c9, type: 3}
+      objectReference: {fileID: 8300000, guid: 6d337528816f01d49b0b7ad2ff302688, type: 3}
     - target: {fileID: 4824061356737489821, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: noBullets
       value: 
-      objectReference: {fileID: 8300000, guid: 5666a62080e32194d96ee40088a7b281, type: 3}
+      objectReference: {fileID: 8300000, guid: 7c2ec78de4c5e6240a83619fa25cb0d4, type: 3}
     - target: {fileID: 4824061356737489821, guid: 7504bfd737a9d2348b0d177907e2a4ef, type: 3}
       propertyPath: resonator
       value: 

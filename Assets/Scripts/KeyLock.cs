@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KeyLock : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class KeyLock : MonoBehaviour
     public Animator leftDoorAnim;
     public Animator rightDoorAnim;
     public bool completedUnlocking = false;
+    public TextMeshProUGUI indicatorText;
+    public GameObject indicatorTextObj;
+
     void Start()
     {
         key.SetActive(false);
         isLocked = true;
+        indicatorTextObj.SetActive(false);
     }
 
 
@@ -25,10 +30,20 @@ public class KeyLock : MonoBehaviour
         leftDoorAnim.SetBool("isUnlocked", completedUnlocking);
         rightDoorAnim.SetBool("isUnlocked", completedUnlocking);
 
+        if(level2Manager.GetComponent<Level2Manager>().hasKey == true)
+        {
+            indicatorText.text = "Press [E] to unlock";
+        }
+        else
+        {
+            indicatorText.text = "Locked";
+        }
+
 
         if (isInside && Input.GetKeyDown(KeyCode.E) && level2Manager.GetComponent<Level2Manager>().hasKey == true)
         {
             key.SetActive(true);
+            indicatorTextObj.SetActive(false);
             isLocked = false;
         }
     }
@@ -36,13 +51,19 @@ public class KeyLock : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
+        {
             isInside = true;
+            indicatorTextObj.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag.Equals("Player"))
+        {
             isInside = false;
+            indicatorTextObj.SetActive(false);
+        }
     }
 
     public void OpenDoor()
