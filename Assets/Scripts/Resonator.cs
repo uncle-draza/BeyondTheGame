@@ -20,6 +20,7 @@ public class Resonator : MonoBehaviour
     public string levelToLoad;
     public GameObject pressToContinue;
     public GameObject indicatorText;
+    public TextMeshProUGUI indicatorTMPRO;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class Resonator : MonoBehaviour
         if(distance<=uiActivationDistance)
         {
             indicatorText.SetActive(true);
+
             if(Input.GetKeyDown(KeyCode.E))
             {
                 if(switchingLevel)
@@ -43,21 +45,12 @@ public class Resonator : MonoBehaviour
                     backgroundImage.sprite = spriteToShow;
                     LoadLevel();
                 }
-                else
-                {
-                    FinishGame();
-                }
             }
         }
         else
         {
             indicatorText.SetActive(false);
         }
-    }
-
-    private void FinishGame()
-    {
-        SceneManager.LoadScene(finalScene);
     }
     void LoadLevel()
     {

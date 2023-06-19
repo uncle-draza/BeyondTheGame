@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ShowingItem
+  - Resonator
   layers:
   - Default
   - TransparentFX
