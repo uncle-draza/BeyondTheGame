@@ -15,6 +15,7 @@ public class PickUpThrow : MonoBehaviour
     public float pickupDistance;
     private bool pickedUp = false;
     private Collider collider;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -69,6 +70,7 @@ public class PickUpThrow : MonoBehaviour
         if(pickedUp == true)
         {
             soundManager.GetComponent<CurrentSound>().AddNewSound(this.transform.position);
+            audioSource.Play();
             pickedUp = false;
         }
     }
