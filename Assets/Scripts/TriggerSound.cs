@@ -1,11 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TriggerSound : MonoBehaviour
 {
     public AudioSource audioSource;
-    private bool hasPlayed = false;
+    public bool hasPlayed = false;
+    public string subtitleText;
+    public TextMeshProUGUI subtitleObj;
+
+    void Update()
+    {
+        if (!audioSource.isPlaying && hasPlayed)
+        {
+            subtitleObj.text = "";
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,16 +26,9 @@ public class TriggerSound : MonoBehaviour
             if(!hasPlayed)
             {
                 audioSource.Play();
+                subtitleObj.text = subtitleText;
                 hasPlayed = true;
             }
         }
     }
 }
-/*private var hasPlayed = false;
-
-function OnTriggerEnter(){
-    if(!hasPlayed){
-        audio.PlayOneShot(Sound);
-        hasPlayed = true;
-    }
-}*/

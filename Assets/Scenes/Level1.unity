@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 24579691}
   - component: {fileID: 24579690}
   - component: {fileID: 24579689}
+  - component: {fileID: 24579694}
   m_Layer: 0
   m_Name: AreaWarining3
   m_TagString: Untagged
@@ -243,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b502627edf44cc44a4cafcf4cc1f75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 24579694}
 --- !u!65 &24579690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -321,6 +323,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 100
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!82 &24579694
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24579688}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 938ef096266296f4388a6b6c0f733316, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &30460578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -466,6 +564,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: I told the same thing to the servants... But they didn't listen. They
+        turned on the lights downstairs even after I warned them not to. I could
+        hear their screams all the way up here.
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -541,6 +649,7 @@ GameObject:
   - component: {fileID: 68944697}
   - component: {fileID: 68944696}
   - component: {fileID: 68944695}
+  - component: {fileID: 68944700}
   m_Layer: 0
   m_Name: AreaWarging2
   m_TagString: Untagged
@@ -560,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b502627edf44cc44a4cafcf4cc1f75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 68944700}
 --- !u!65 &68944696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -638,6 +748,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &68944700
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68944694}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 938ef096266296f4388a6b6c0f733316, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!64 &69697096
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2723,6 +2929,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7912934650744709570, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8921837527156549296, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
       propertyPath: m_Name
       value: UI
@@ -2782,6 +2992,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8921837527168949581, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
   m_PrefabInstance: {fileID: 661493285}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &661493287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7912934650744709570, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
+  m_PrefabInstance: {fileID: 661493285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &671148908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,6 +3475,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: These monsters you can see above your head can see you only if you move.
+        You are free to look around though...
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -4554,6 +4784,7 @@ GameObject:
   - component: {fileID: 984495291}
   - component: {fileID: 984495290}
   - component: {fileID: 984495289}
+  - component: {fileID: 984495294}
   m_Layer: 0
   m_Name: AreaWarning4
   m_TagString: Untagged
@@ -4573,6 +4804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b502627edf44cc44a4cafcf4cc1f75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 984495294}
 --- !u!65 &984495290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4651,6 +4883,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 102
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!82 &984495294
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984495288}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 938ef096266296f4388a6b6c0f733316, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &993549779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,6 +5190,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: Arent they magnificent? The creatures men call pure air and blue sky...
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -4962,6 +5298,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: Resonator, the machine before your very eyes allows us to see all of
+        this...
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -8533,6 +8878,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: Remember we are dealing with the hideous world in which we are practically
+        helpless... So keep still.
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -11066,6 +11420,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 661493287}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: Listen to me very carefully! Do not move. They can see us if we move
+        just as well we can see them.
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0

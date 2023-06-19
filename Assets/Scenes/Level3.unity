@@ -11341,6 +11341,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 2058075196}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: Do not even look around... Even I don't know what could happen to you...
+        Probably the same thing that happened to the poor servants.
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -12889,6 +12898,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleObj
+      value: 
+      objectReference: {fileID: 2058075196}
+    - target: {fileID: 4371553897825647857, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
+      propertyPath: subtitleText
+      value: These ones are different... They can sense even the slightest move...
+        even your eyeballs moving...
+      objectReference: {fileID: 0}
     - target: {fileID: 4371553897825647858, guid: 776995f864a88b74faa7550d54d6b727, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -16731,6 +16749,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8921837527156549297, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
   m_PrefabInstance: {fileID: 2058075194}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2058075196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7912934650744709570, guid: 896c2b63b15f53844ae9dd5921992c59, type: 3}
+  m_PrefabInstance: {fileID: 2058075194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2077386567
 GameObject:
   m_ObjectHideFlags: 0
